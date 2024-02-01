@@ -1,13 +1,11 @@
-import Versions from './components/Versions'
-import electronLogo from './assets/electron.svg'
 import '@radix-ui/themes/styles.css'
-import { Flex, Text, Button, Theme } from '@radix-ui/themes'
+import { Button } from './components/ui/button'
 
 function App(): JSX.Element {
   const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
   return (
     <>
-      <img alt="logo" className="logo" src={electronLogo} />
+      <Button variant="ghost">Hello</Button>
       <div className="creator">Powered by electron-vite</div>
       <div className="text">
         Build an Elec app with <span className="react">React</span>
